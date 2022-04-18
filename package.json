@@ -1,0 +1,19 @@
+{
+  "dependencies": {
+    "express": "^4.17.3",
+    "jest": "^27.5.1",
+    "mongoose": "^6.3.0",
+    "supertest": "^6.2.2"
+  },
+  "scripts": {
+    "start": "nodemon server.js",
+    "load": "node loadInitialData.js",
+    "test": "jest"
+  },
+  "name": "hackity-hack1",
+  "description": "pizza",
+  "version": "1.0.0",
+  "main": "mongoose.js",
+  "author": "",
+  "license": "ISC"
+}
