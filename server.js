@@ -19,5 +19,5 @@ app.use("/pizza", pizzaRoutes);
 app.use("/order", orderRoutes);
 
 app.listen(port, () => {
-  console.log`Example app listening on port ${port}!`
+  console.log(`Example app listening on port ${port}!`)
 });

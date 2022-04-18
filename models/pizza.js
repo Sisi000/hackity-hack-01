@@ -18,10 +18,10 @@ const pizzaSchema = new Schemas({
     type: Number,
     required: true,
   }
-);
+});
 
 // create model from schema
-const Pizzas = Mongoose.model("Pizza", pizzaSchema);
+const Pizza = mongoose.model("Pizza", pizzaSchema);
 
 // export model
 module.export = Pizza;

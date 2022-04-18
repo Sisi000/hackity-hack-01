@@ -3,7 +3,7 @@ const mongoose = require("../mongoose");
 // order schema
 const orderSchema = new mongoose.Schema({
   pizzas: {
-    type: [{ name: String, toppings: String, price: Number }],
+    type: { name: String, toppings: String, price: Number },
     required: true,
     validate: {
       validator: function (pizzas) {
@@ -32,4 +32,4 @@ const orderSchema = new mongoose.Schema({
 });
 
 // create model from schema
-const Orders = mongoose.model(orderSchema, "Orders");
+const Orders = mongoose.model( "Orders",orderSchema);

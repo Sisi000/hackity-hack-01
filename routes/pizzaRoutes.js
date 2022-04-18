@@ -5,8 +5,8 @@ const router = express.Router();
 // get all pizzas
 router.get("/", async (req, res) => {
   try {
-    const pizzas = await Pizza.find({});
-    res.send(pizzas);
+    const pizza = await pizza.find({});
+    res.send(pizza);
   } catch (err) {
     res.send(err);
   }
@@ -15,7 +15,7 @@ router.get("/", async (req, res) => {
 // get pizza by id
 router.get("/:id", async (req, res) => {
   try {
-    const pizza = await Pizza.findById(req.params.id);
+    const pizza = await pizza.findById(req.params.id);
     res.send(pizza);
   } catch (err) {
     res.send(err);
@@ -25,7 +25,7 @@ router.get("/:id", async (req, res) => {
 // create pizza
 router.post("/", async(req, res) => {
   try {
-    const pizza = await Pizza.create(req.body);
+    const pizza = await pizza.create(req.body);
     res.send(pizza);
   } catch (err) {
     res.send(err);
@@ -35,7 +35,7 @@ router.post("/", async(req, res) => {
 // update pizza
 router.put("/:id", async(req, res) => {
   try {
-    const pizza = await Pizza.findByIdAndUpdate(req.params.id, req.body);
+    const pizza = await pizza.findByIdAndUpdate(req.params.id, req.body);
     res.send(pizza);
   } catch (err) {
     res.send(err);
@@ -45,7 +45,7 @@ router.put("/:id", async(req, res) => {
 // delete pizza
 router.delete("/:id", async (req, res) => {
   try {
-    const pizza = await Pizza.findByIdAndDelete(req.params.id);
+    const pizza = await pizza.findByIdAndDelete(req.params.id);
     res.send(pizza);
   } catch (err) {
     res.send(err);
