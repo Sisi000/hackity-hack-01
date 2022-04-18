@@ -23,5 +23,10 @@ const pizzaSchema = new Schemas({
 // create model from schema
 const Pizza = mongoose.model("Pizza", pizzaSchema);
 
+const createPizza = async(pizza) => {
+  const newPizza = await Pizza.create(pizza)
+  return newPizza
+}
+
 // export model
-module.export = Pizza;
+module.export = {Pizza, createPizza};

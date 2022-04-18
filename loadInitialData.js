@@ -34,11 +34,15 @@ const pizzaData = [
 // load data
 const loadInitialData = async () => {
   // load pizzas
-  for (let i=0; i< pizza.length; i++) {
-     let pizza = pizza[i] ;
+  for (let i=0; i< pizzaData.length; i++) {
+     let pizza = pizzaData[i] ;
+  try{
     console.log(pizza)
+  } catch{
+    console.log("Pizzas loaded");
+
   }
-  console.log("Pizzas loaded");
+}
 };
 
 loadInitialData();
